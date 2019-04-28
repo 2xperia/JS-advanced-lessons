@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function te(){
+            document.write(this);
+        }
+        te();
+
+        var i = {
+            x:0,
+            //this指向调用该方法的对象
+            text:function(){
+                document.write(this.x);
+            }
+        }
+
+        var ob = {obname:"sss"};
+        var oc = {ocname:"ddd"};
+        ob.fol = function(){
+            document.write(this.obname);
+        }
+        ob.fol();
+        ob.fol.call(oc);
+
+        function person(name){
+            this.name = name;
+        }
+        person.prototype.say = function(){
+            document.write("杀"+this.name);
+        }
+        var pp = new person("xuemingxing");
+        pp.say();
+
+        function text(){
+            var s = "";
+            //arguments获取函数传进的实参，是个类数组对象
+            for (let i = 0; i < arguments.length; i++) {
+                s += arguments[i];
+                
+            }
+            return s;
+        }
+        text("xuemingxing","shabi");
+
+
+        var ee = 1;
+        function foo(x){
+            x = 2;
+            document.write("ee:",ee,"x:",x);
+        }
+        foo(ee);
+        document.write(ee);
+
+        var objj = {"username":"xuemingxing","age":20};
+        function say(){
+            document.write("username:"+objj.username + "age:"+objj.age)
+        }
+        say();
+
+        function copyArg(arg1){
+            var copy;
+            switch(true){
+                case(arg1 instanceof String):
+                  copy = arg1;
+                  break;
+                case(arg1 instanceof Number):
+                  copy = arg1;
+                  break;
+                case(arg1 instanceof Boolean):
+                  copy = arg1;
+                  break;
+                case(arg1 instanceof Array):
+                  copy = {};
+                  for (let i = 0; i < arg1.length; i++) {
+                      copy[i] = arg1[i];
+                      
+                  }
+                  break;
+            }
+        }
+    </script>
+</body>
+</html>

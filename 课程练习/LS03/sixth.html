@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(username,age){
+            this.username = name;
+            this.age = age;
+        }
+        var per = new Person("zhang",14);
+        per instanceof Person;
+        document.write(per);
+        document.write(per._proto_ = Person.prototype);
+        document.write(per instanceof Object);
+        document.write(per._proto_._proto_);
+        document.write(Object._proto_);
+
+        function fol(){
+            for (var i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+                
+            }
+        }
+        function fkl(){
+            console.log(fkl.caller);
+        }
+        fkl();
+        fol();
+        
+        function fgl(){
+            Person.call();
+            
+        }
+    </script>
+</body>
+</html>
