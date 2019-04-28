@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //非严格模式下，this指向window对象
+    //严格模式下，this 指向 undefined
+    //this是谁，取决于函数调用的主体
+    var x = 10;
+    console.log(window.x);
+    function thisT(){
+        console.log(this);
+        console.log(this == window);
+    }
+    thisT();
+
+    function thisT1(){
+        'use strict';
+        console.log(this);
+        return this===undefined ?true:false;
+    }
+    thisT1();
+</script>
+</html>

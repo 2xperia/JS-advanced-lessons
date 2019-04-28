@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    //定义一个车的对象， height ，width， weight
+    //创建一个小轿车的对象，继承车的相关属性，自己拥有
+    //color seetNum
+    //create 方法 以及构造函数的形成
+</body>
+<script>
+    var car = {
+        height :150,
+        width :200,
+        weight :2000
+    }
+
+    var newcar = Object.create(car);
+    newcar.color = "red";
+    newcar.newcar = 4;
+
+    console.log(newcar.height);
+    console.log(newcar.width);
+
+    function createNewcar(color ,seatNum){
+        this.color = color;
+        this.seatNum = seatNum;
+    }
+
+    createNewcar.prototype = car;
+
+    var newcar = new createNewcar("red",4);
+</script>
+
+
+
+
+
+
+<script>
+    /*
+    1.防止变量污染
+    2.防止变量的非期望共享
+    3.
+    */
+    (function(){
+
+    })();
+    for (let index = 0; index < array.length; index++) {
+        //1.给元素绑定事件，回调函数
+        //2.延迟执行，定时执行
+        (function(j){
+
+        })(i);
+    }
+
+    //闭包，Javascript存在的代码运行机制
+    //外层函数fn1，内层函数fn2
+    function fn1(){
+        var x = 0;
+        function fn2(){
+            return ++x;
+
+        }
+        return fn2;
+    }
+    var result = fn1();
+    result();
+    result();
+
+
+</script>
+</html>
