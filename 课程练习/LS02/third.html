@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    'use strict'
+    //ES5   ECMAScript简写，语言标准
+    //ES5   ES6是最流行的两个版本
+    //JavaScript在ES5标准下没有块作用域
+
+    /*if (true) {
+        var a = 1;
+        document.write(a);
+    }
+    a = 2;
+    document.write(a);*/
+
+    if (false) {
+        var a = 1;
+        document.write(a);
+    }
+    a = 2;
+    document.write(a);
+
+
+    for(var i = 0;i<3 ;i++){}
+    document.write(i);
+    var k = 166;
+    document.write(k);
+
+
+    //如果变量不用var 声明，自动变为全局变量，全局变量是一个很大的缺点
+    function ful(){
+        'use stract'
+         var us = "ss";
+    }ful();
+    
+
+    function full() {
+        console.log(this);
+        //非严格模式下，普通函数内部this指向window对象
+        //严格模式下，this指向undefined
+    }
+
+    function fulll() {
+        var sul = (this === undefined?true:false);
+        return sul;
+        
+    }console.log(fulll());
+
+    var str = "sdfghj";
+    str.length = 2;
+    console.log(str,length);
+
+
+
+
+    var index = 1;
+
+    //switch case是进行的值和类型的判断
+    //
+    switch (i) {
+        case 1:
+            console.log("ssss");
+            break;
+        case 2:
+            console.log("sdsdsd")
+        default:
+            break;
+    }
+
+
+    switch(j){
+        case 24:
+        console.log("case_111");
+        
+        case "25"
+
+
+
+    }
+    
+</script>
+</html>

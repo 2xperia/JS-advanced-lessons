@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LS03</title>
+</head>
+<body>
+    <script>
+        //基本数据类型在操作时有自动装箱过程，完成后自动释放
+        var num = 30;
+        num.toString();
+
+
+        var num = 30;
+        var numObject = new Number();
+        numObject.toString(); 
+
+
+        num.p = 20;
+        var o = num.p;
+        document.write();
+
+        var num1 = 305;
+        var s = num1.toFixed(1);
+        var d = num1.toPrecision(2);
+        var f = num1.toExponential(3);
+        var g = num1.toLocaleString(3);
+        document.write();
+        console.log(d);
+        console.log(f);
+        console.log(g);
+
+
+
+        var num2 = "asdfghjkl";
+        var q = num2.charAt(3);
+        var e = num2.charCodeAt(2);
+        document.write(q);
+        document.write(e);
+        var r = num2.substring(2,5);
+        document.write(r);
+
+        var t = num2.concat()
+
+        var w = "Asd" > "Axg";
+        document.write(w);
+        document.write("B".localeCompare("A"));
+
+        document.write(Boolean({}));
+
+        document.write(Boolean(NaN));
+
+
+
+
+        //ch4
+        
+
+    </script>
+</body>
+</html>

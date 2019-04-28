@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*var a = 45;
+        if (a == 45) {
+            console.log("dengyu")
+        } else {
+            document.write("foolish");
+        }
+
+        if (45 == a) {
+            console.log("wrong!!");
+        }
+
+
+        if (45 ===a) {
+            document.write("that's right!!");
+        }
+
+        document.write("1"+"2");
+        document.write("1"+2);
+        document.write("1"+{});
+        document.write("1"+true);
+        document.write(true+true);
+        document.write("6"-4);*/
+
+
+        var x = "12";
+        console.log(++x);
+        var c = "1";
+        console.log(c += 11);
+
+
+
+        console.log(NaN === NaN);
+        console.log({} == {});
+        console.log("sdsd" == "sdsd");
+        console.log(3 ==3);
+
+
+        var obj1 = new String("xyz");
+        var obj2 = new String("xyz");
+        console.log("xyz"===obj1);
+        console.log(obj1 == obj2);
+        console.log(obj1 === obj2);
+        console.log(obj1 == new String("xyz"));
+
+
+
+        console.log(2>1&&4<5);
+        console.log(true&&(!2));
+        console.log(false&&("2" == 2));
+        console.log(false&&false);
+
+        console.log(2>1||4<5);
+        console.log(true||(!2));
+        console.log(false||("2" == 2));
+        console.log(false||false);
+
+
+        console.log(20 && 0);
+        document.write(null && 100);
+        document.write(2||40);
+        //&& ：左真右，左假左
+        // || ：左真左，左假右
+        console.log({x:2}||{name:"Jack"});
+
+        document.write(null && null);
+
+
+        var sc = 77;
+        if (sc>90) {
+            console.log("niubi");
+        }else if(sc>75) {
+            console.log("haixing");
+        }else if(sc>60){
+            console.log("bacuo");
+        }else{
+            console.log("laji");
+        }
+
+        document.write((sc>90 && "niubi")||(sc>75 &&"haixing")||(sc>60&&"bacuo")||"laji")
+
+
+        switch (true) {
+            case sc > 90:
+                document.write("niubi");
+                break;
+            case sc > 75:
+                document.write("haixing");
+                break;
+            case sc > 60:
+                document.write("bacuo");
+                break;
+            default:
+                document.write("laji");
+                break;
+        }
+    </script>
+    <script>
+        function name(as,bs,cs) {
+            as = as;
+            bs = bs;
+            cs = cs;
+            
+        }
+        name();
+
+        var sum = function(a,b,c){
+            b = b||4;
+            c = c||5;
+            return a+b+c;
+        };
+        console.log(sum(1,2,3));
+        console.log(sum(1,2));
+        console.log(sum(1));
+        document.write(sum(false));
+
+
+        var sum = function(a,b,c){
+            if(b!=false){b = b||4;}//(b!=false)&&(b=b||4);
+            if(c!=false){c = c||5;}//(c!=false)&&(c=c||5);
+            return a+b+c;
+        };
+        console.log(sum(1,2,3));
+        console.log(sum(1,2));
+        console.log(sum(1));
+        console.log(sum(1,0,0));
+    </script>
+    <script>
+        function maaa(a,b){
+            return sss;
+        }
+        maaa(a,b);
+
+
+        var max = new Function("a","b","return a>b?a:b");
+        max(2,3);
+    </script>
+</body>
+</html>
